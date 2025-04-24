@@ -1,0 +1,43 @@
+input {
+    &.form-control {
+        height: 48px;
+        padding: 12px;
+        flex-shrink: 0;
+
+        border-radius: 6px;
+        border: 1px solid #166534;
+        box-shadow: none;
+        outline: none;
+
+        color: #166534;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        &::placeholder {
+            color: #166534;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &.form-check-input {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #166534;
+        &:checked {
+            background-color: #166534 !important;
+            border-color: #166534 !important;
+        }
+
+        &.wrong {
+            &:checked {
+                background-color: #FF435C !important;
+                border-color: #FF435C !important;
+            }
+        }
+    }
+}

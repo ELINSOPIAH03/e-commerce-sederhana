@@ -1,0 +1,62 @@
+.btn-bg{
+    display: flex;
+    height: 48px;
+    padding: 14px 34px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: 10px;
+    background: var(--Blue, #166534);
+
+    color: #86efac;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    outline: none;
+    box-shadow: none;
+    &.outline{
+        
+        color: #166534;
+        background: #86efac;
+        
+        border: 1px solid #166534;
+    }
+
+    &.login{
+        padding: 15.631px 27.971px;
+        font-size: 19.744px;
+        height: unset;
+    }
+
+    &.add{
+        font-size: 16px;
+        padding: 16px 20px;
+        border-radius: 8px;
+    }
+}
+
+.btn-dell{
+    display: flex;
+    height: 38px;
+    padding: 12px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+
+    border-radius: 10px;
+    background: #ef4444;
+
+    color: var(--v1-white, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    outline: none;
+    box-shadow: none;
+}
