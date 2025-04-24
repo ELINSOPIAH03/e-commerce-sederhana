@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link  } from "react-router-dom";
 import Navbar from '../components/Navbar'
 
 export default function Login() {
@@ -19,14 +19,29 @@ export default function Login() {
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        if (email === dummyUser.email && password === dummyUser.password) {
+        // if (email === dummyUser.email && password === dummyUser.password) {
+        //     localStorage.setItem("isLoggedIn", "true");
+        //     navigate("/");
+        // } else {
+        //     setErrorMessage("Email atau password salah.");
+        // }
+        const storedUser = localStorage.getItem("registeredUser");
+        const parsedUser = storedUser ? JSON.parse(storedUser) : null;
+
+        const isDummyMatch =
+            email === dummyUser.email && password === dummyUser.password;
+
+        const isRegisteredMatch =
+            parsedUser && email === parsedUser.email && password === parsedUser.password;
+
+        if (isDummyMatch || isRegisteredMatch) {
             localStorage.setItem("isLoggedIn", "true");
             navigate("/");
         } else {
             setErrorMessage("Email atau password salah.");
         }
     };
-    
+
     return (
         <div className="min-h-full">
             <Navbar />
@@ -100,9 +115,11 @@ export default function Login() {
 
                             <p className="mt-10 text-center text-sm/6 text-gray-500">
                                 Not a member?{' '}
-                                <a href="#" className="font-semibold text-green-600 hover:text-green-500">
+                                <Link
+                                    to="/register"
+                                    className="font-semibold text-green-600 hover:text-green-500">
                                     Register
-                                </a>
+                                </Link>
                             </p>
                         </div>
                     </div>
