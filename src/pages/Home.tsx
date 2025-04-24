@@ -82,14 +82,14 @@ export default function Home() {
                             <h2 className="text-xl font-medium py-6">Belum Dibeli</h2>
                             <ul className="border border-slate-300 rounded-lg">
                                 {unfinishedTasks.length === 0 ? (
-                                    <div className="flex flex-col w-full gap-4 justify-center m-7 items-center">
-                                        <ShoppingCartIcon aria-hidden="true" className="size-20 text-gray-400" />
-                                        <p className="text-sm lg:text-xl text-gray-400">Belum ada barang yang akan dibeli.</p>
+                                    <div className="flex flex-col w-full gap-4 justify-center m-2 lg:m-7 items-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400" />
+                                        <p className="text-sm lg:text-xl text-gray-400 text-center">Belum ada barang yang akan dibeli.</p>
                                     </div>
                                 ) : (unfinishedTasks.map((task) => (
                                     <li key={task.id}
-                                        className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0">
-                                        <div className="flex gap-4 items-center text-base font-medium">
+                                        className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0 g-2">
+                                        <div className="flex gap-4 items-center text-sm lg:text-base font-medium">
                                             <input
                                                 className="form-check-input"
                                                 type="checkbox"
@@ -99,7 +99,7 @@ export default function Home() {
                                             {task.name}
                                         </div>
                                         <button
-                                            className="btn-dell" 
+                                            className="btn-dell text-xs lg:text-base" 
                                             onClick={() => handleDeleteTask(task.id)}>Hapus</button>
                                     </li>
                                 ))
@@ -109,15 +109,15 @@ export default function Home() {
                             <h2 className="text-xl font-medium py-6">Sudah Dibeli</h2>
                             <ul className="border border-slate-300 rounded-lg">
                                 {finishedTasks.length === 0 ? (
-                                    <div className="flex flex-col w-full gap-4 justify-center m-7 items-center">
-                                        <ShoppingCartIcon aria-hidden="true" className="size-20 text-gray-400" />
-                                        <p className="text-sm lg:text-xl text-gray-400">Belum ada barang yang sudah dibeli.</p>
+                                    <div className="flex flex-col w-full gap-4 justify-center m-2 lg:m-7 items-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400" />
+                                        <p className="text-sm lg:text-xl text-gray-400 text-center">Belum ada barang yang sudah dibeli.</p>
                                     </div>
                                     ) : (finishedTasks.map((task) => (
                                         <li 
-                                            className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0"
+                                            className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0 g-2"
                                             key={task.id}>
-                                            <div className="flex gap-4 items-center text-base font-medium" style={{ textDecoration: "line-through" }}>
+                                            <div className="flex gap-4 items-center text-sm lg:text-base font-medium" style={{ textDecoration: "line-through" }}>
                                                 <input
                                                     className="form-check-input"
                                                     type="checkbox"
@@ -127,7 +127,7 @@ export default function Home() {
                                                 {task.name}
                                             </div>
                                             <button 
-                                                className="btn-dell" 
+                                                className="btn-dell text-xs lg:text-base" 
                                                 onClick={() => handleDeleteTask(task.id)}>Hapus</button>
                                         </li>
                                     ))

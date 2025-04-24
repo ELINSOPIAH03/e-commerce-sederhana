@@ -42,21 +42,23 @@
 .btn-dell{
     display: flex;
     height: 38px;
-    padding: 12px 12px;
+    padding: 8px 8px;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     align-self: stretch;
 
     border-radius: 10px;
     background: #fef2f2;
 
     color: #ef4444;
-    font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 
     outline: none;
     box-shadow: none;
+
+    @media (min-width: 768px) {
+        padding: 12px 12px;
+    }
 }
