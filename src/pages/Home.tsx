@@ -64,15 +64,18 @@ export default function Home() {
 
                             <div className="flex gap-4 w-full ">
                                 <input
-                                    className="w-4/6 lg:w-full form-control"
+                                    className="w-4/6 sm:w-11/12 form-control"
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     placeholder="Tambah belanjaan..."
                                 />
                                 <button 
-                                    className="btn-bg add w-1/3 lg:w-max sm:w-max"
-                                    onClick={handleAddTask}>Tambah</button>
+                                    className="btn-bg add w-max"
+                                    onClick={handleAddTask}>
+                                        <span className="block sm:hidden">+</span>
+                                        <span className="hidden sm:block">Tambah</span>
+                                    </button>
                             </div>
 
                             <h2 className="text-xl font-medium py-6">Belum Dibeli</h2>
