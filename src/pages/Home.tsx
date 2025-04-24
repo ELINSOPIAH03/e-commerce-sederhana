@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
+import { ShoppingCartIcon } from '@heroicons/react/24/solid'
 
 import '../scss/components/_button.scss'
 import '../scss/components/_input.scss'
@@ -57,21 +58,21 @@ export default function Home() {
         <>
             <div className="min-h-full">
                 <Navbar />
-                <Header title="Todo Belanjaan 🛒" />
+                <Header title="Todo Belanjaan" />
                 <main>
-                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                        <div style={{ padding: "20px" }}>
+                    <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 ">
+                        <div className="border border-slate-300 rounded-lg bg-white p-7">
 
                             <div className="flex gap-4 w-full ">
                                 <input
-                                    className="w-4/6 sm:w-11/12 form-control"
+                                    className="w-4/6 sm:w-10/12 form-control grey"
                                     type="text"
                                     value={input}
                                     onChange={(e) => setInput(e.target.value)}
                                     placeholder="Tambah belanjaan..."
                                 />
                                 <button 
-                                    className="btn-bg add w-max"
+                                    className="btn-bg add w-full"
                                     onClick={handleAddTask}>
                                         <span className="block sm:hidden">+</span>
                                         <span className="hidden sm:block">Tambah</span>
@@ -79,12 +80,15 @@ export default function Home() {
                             </div>
 
                             <h2 className="text-xl font-medium py-6">Belum Dibeli</h2>
-                            <ul>
+                            <ul className="border border-slate-300 rounded-lg">
                                 {unfinishedTasks.length === 0 ? (
-                                    <p className="text-red-500">Belum ada barang yang akan dibeli.</p>
+                                    <div className="flex flex-col w-full gap-4 justify-center m-7 items-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-20 text-gray-400" />
+                                        <p className="text-sm lg:text-xl text-gray-400">Belum ada barang yang akan dibeli.</p>
+                                    </div>
                                 ) : (unfinishedTasks.map((task) => (
                                     <li key={task.id}
-                                        className="bg-green-100 p-2 rounded-md w-full flex justify-between items-center mb-2">
+                                        className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0">
                                         <div className="flex gap-4 items-center text-base font-medium">
                                             <input
                                                 className="form-check-input"
@@ -103,12 +107,15 @@ export default function Home() {
                             </ul>
 
                             <h2 className="text-xl font-medium py-6">Sudah Dibeli</h2>
-                            <ul>
+                            <ul className="border border-slate-300 rounded-lg">
                                 {finishedTasks.length === 0 ? (
-                                    <p className="text-red-500">Belum ada barang yang sudah dibeli.</p>
+                                    <div className="flex flex-col w-full gap-4 justify-center m-7 items-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-20 text-gray-400" />
+                                        <p className="text-sm lg:text-xl text-gray-400">Belum ada barang yang sudah dibeli.</p>
+                                    </div>
                                     ) : (finishedTasks.map((task) => (
                                         <li 
-                                            className="bg-green-100 p-2 rounded-md w-full flex justify-between items-center mb-2"
+                                            className="p-4 w-full flex justify-between items-center border-b border-slate-300 last:border-b-0"
                                             key={task.id}>
                                             <div className="flex gap-4 items-center text-base font-medium" style={{ textDecoration: "line-through" }}>
                                                 <input

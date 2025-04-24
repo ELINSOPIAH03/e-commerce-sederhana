@@ -1,7 +1,7 @@
 .btn-bg{
     display: flex;
     height: 48px;
-    padding: 14px 34px;
+    padding: 14px 14px;
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -11,7 +11,7 @@
     background: var(--Blue, #166534);
 
     color: #86efac;
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -49,9 +49,9 @@
     align-self: stretch;
 
     border-radius: 10px;
-    background: #ef4444;
+    background: #fef2f2;
 
-    color: var(--v1-white, #FFF);
+    color: #ef4444;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
