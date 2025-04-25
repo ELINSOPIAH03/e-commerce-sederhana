@@ -1,3 +1,52 @@
+# E-Commerce Sederhana dengan React, Tailwind, dan TypeScript
+
+## Deskripsi Project
+Proyek ini adalah aplikasi e-commerce kecil dan sederhana yang saya buat sebagai bagian dari tes masuk kerja. Aplikasi ini tidak menggunakan backend — semua data bersifat dummy dan disimpan menggunakan **localStorage** dari JavaScript.
+
+## Fitur Utama
+
+- **To-Do List (Daftar Belanja)**  
+  Pengguna dapat membuat daftar barang yang ingin dibeli dan memantau progres penyelesaiannya melalui presentase.
+
+- **Login & Register**  
+  Fitur login dan pendaftaran pengguna sederhana menggunakan penyimpanan lokal tanpa autentikasi backend.
+
+- **Cart**  
+  Keranjang belanja yang memungkinkan pengguna menambahkan atau menghapus produk dari daftar belanja.
+
+- **Product Page**  
+  Menampilkan daftar produk dummy lengkap dengan nama, harga, dan gambar.
+
+## Teknologi yang Digunakan
+
+- **ReactJS** – Untuk membangun antarmuka aplikasi.
+- **TailwindCSS** – Untuk styling yang cepat dan responsif.
+- **TypeScript (TSX)** – Untuk penulisan kode berbasis tipe.
+- **localStorage** – Untuk menyimpan data pengguna dan status aplikasi secara lokal.
+
+## Panduan Instalasi
+
+Berikut langkah-langkah untuk menjalankan proyek ini secara lokal:
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/ELINSOPIAH03/e-commerce-sederhana.git
+cd .\e-commerce-sederhana\
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install / npm i
+```
+
+### 3. Jalankan Aplikasi
+
+```bash
+npm run dev
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
