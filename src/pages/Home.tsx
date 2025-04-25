@@ -94,8 +94,8 @@ export default function Home() {
                             <h2 className="text-xl font-medium py-6">Not Purchased</h2>
                             <ul className="border border-slate-300 rounded-lg">
                                 {unfinishedTasks.length === 0 ? (
-                                    <div className="flex flex-col w-full gap-4 justify-center m-2 lg:m-7 items-center">
-                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400" />
+                                    <div className="m-2 lg:m-7 text-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400 mx-auto" />
                                         <p className="text-sm lg:text-xl text-gray-400 text-center">Your shopping list is empty. Start adding items!</p>
                                     </div>
                                 ) : (unfinishedTasks.map((task) => (
@@ -123,8 +123,8 @@ export default function Home() {
                             <h2 className="text-xl font-medium py-6">Purchased </h2>
                             <ul className="border border-slate-300 rounded-lg">
                                 {finishedTasks.length === 0 ? (
-                                    <div className="flex flex-col w-full gap-4 justify-center m-2 lg:m-7 items-center">
-                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400" />
+                                    <div className="m-2 lg:m-7 text-center">
+                                        <ShoppingCartIcon aria-hidden="true" className="size-15 sm:size-20 text-gray-400 mx-auto" />
                                         <p className="text-sm lg:text-xl text-gray-400 text-center">Your purchased list is still empty</p>
                                     </div>
                                 ) : (finishedTasks.map((task) => (
